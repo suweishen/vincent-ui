@@ -2,6 +2,7 @@
  * 整合所有组件，全局install
  */
 import Button from './Button'
+import Cell from './Cell'
 import Col from './Col'
 import Dialog from './Dialog'
 import Divider from './Divider'
@@ -14,7 +15,7 @@ import TabbarItem from './TabbarItem'
 
 // 存储组建列表
 const components = [
-  Button, Col, Dialog, Divider, Icon, Popup, Row, Switch, Tabbar, TabbarItem
+  Button, Col, Dialog, Divider, Icon, Popup, Row, Switch, Tabbar, TabbarItem, Cell
 ]
 
 // 定义install方法，接收Vue作为参数

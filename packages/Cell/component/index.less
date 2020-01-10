@@ -1,0 +1,77 @@
+// cell容器
+.v-cell-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  background: #fff;
+  user-select: none;
+  -webkit-user-selete: none; 
+}
+
+// cell-title-wrapper
+.v-cell-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+// cell title
+.v-cell-title {
+  color: black;
+  font-size: 16px;
+}
+.v-cell-title-icon {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+}
+
+// cell-value-wrapper
+.v-cell-value-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+// cell value
+.v-cell-value {
+  padding-right: 5px;
+  color: #b1b1b1;
+  font-size: 16px;
+}
+
+.v-cell-value-arrow {
+  display: flex;
+  color: #b1b1b1;
+  align-items: center;
+}
+
+// 增加外边框
+.v-cell-wrapper:after {
+  /* 绝对定位到父元素最低端，可以通过left/right的值控制边框长度或者定义width:100%;*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* 初始化边框 */
+  content: '';
+  box-sizing: border-box;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* 以上代码，实现了一个边框为1px的元素，下面实现0.5px边框*/
+  transform: scaleY(0.4); // 元素Y方向缩小为原来的0.5
+  transform-origin: 0 0; // CSS属性让你更改一个元素变形的原点。
+}
+
+// 增加背景色
+.v-cell-addBckground {
+  background: #f3f3f3;
+}
+
+// 删除北京设
+.v-cell-removeBackground {
+  background: #fff;
+}

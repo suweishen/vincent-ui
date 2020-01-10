@@ -64,6 +64,26 @@
       left content
     </v-popup>
 
+    <v-divider
+      text="Cell"
+    />
+
+    <v-cell title="基础样式" value="内容" isLink />
+    <v-cell title="单元格" titleIcon="order" value="内容" isLink />
+    <v-cell value="内容" isLink >
+      <template slot="title">
+        <span class="custom-title">title插槽</span>
+        <v-button type="error" size="small">按钮</v-button>
+      </template>
+    </v-cell>
+
+    <v-cell title="right-icon插槽">
+      <v-icon
+        slot="right-icon"
+        name="search"
+      />
+    </v-cell>
+
     <v-dialog
       :show="showDialog"
       text="是否确认退出登录？"
@@ -83,15 +103,6 @@
 
 <script>
 // @ is an alias to /expamles
-// import VButton from '~/Button/component/index.vue'
-// import VSwitch from '~/Switch/component/index.vue'
-// import VDivider from '~/Divider/component/index.vue'
-// import VDialog from '~/Dialog/component/index.vue'
-// import VTabbar from '~/Tabbar/component/index.vue'
-// import VTabbarItem from '~/TabbarItem/component/index.vue'
-// import VCol from '~/Col/component/index.vue'
-// import VRow from '~/Row/component/index.vue'
-// import VPopup from '~/Popup/component/index.vue'
 export default {
   name: 'home',
   data () {
@@ -104,9 +115,6 @@ export default {
       showRightPopup: false
     }
   },
-  // components: {
-  //   VButton, VSwitch, VDialog, VTabbar, VTabbarItem, VDivider, VCol, VRow, VPopup
-  // },
   methods: {
     complete (data) {
       console.log(data)
@@ -123,4 +131,9 @@ export default {
     padding: 0;
     margin: 0;
   }
+  // .home {
+  //   width: 100%;
+  //   height: 100%;
+  //   background: #f9f9f9;
+  // }
 </style>
