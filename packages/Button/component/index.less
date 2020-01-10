@@ -1,0 +1,167 @@
+/*
+ * 按钮样式
+ */
+
+ // 基础样式
+.v-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  width: auto;
+  padding: 5px 15px;
+  color: #888;
+  border: 1px solid #e6e6e6;
+  outline: 0;
+  transition: all .2s linear;
+  border-radius: 4px;
+}
+
+// active
+.v-button:active {
+  background: #f5f5f5;
+}
+
+// 禁用时样式
+.v-button[disabled] {
+  color: #888;
+  background: #ecf0f1;
+  border-color: #e6e6e6;
+}
+
+// 主要按钮样式
+.v-button-primary {
+  color: #fff;
+  background: #2d8cf0;
+}
+
+.v-button-primary:active {
+  background: #3d9fbd;
+}
+
+// 成功按钮样式
+.v-button-success {
+  color: #fff;
+  background: #19be6b;
+}
+
+.v-button-success:active {
+  background: rgb(64, 179, 163);
+}
+
+// 错误按钮样式
+.v-button-error {
+  color: #fff;
+  background: #ed4014;
+}
+
+.v-button-error:active {
+  background: #eb5b90;
+}
+
+// 圆角按钮样式
+.v-button-round {
+  border-radius: 14px;
+}
+
+// 圆形按钮
+.v-button-circle {
+  padding: 10px;
+  border-radius: 50%;
+}
+
+// 小型按钮
+.v-button-small {
+  font-size: 10px;
+  padding: 2px 5px;
+}
+
+// 大型按钮
+.v-button-large {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
+// icon loading加载
+.v-button-icon-loading {
+  display: inline-block;
+  margin-right: 3px;
+  animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+  10% {
+    transform: rotate(36deg);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  30% {
+    transform: rotate(108deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  70% {
+    transform: rotate(252deg);
+  }
+  80% {
+    transform: rotate(288deg);
+  }
+  90% {
+    transform: rotate(324deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate { /*Safari and Chrome*/
+  10% {
+    transform: rotate(36deg);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  30% {
+    transform: rotate(108deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  70% {
+    transform: rotate(252deg);
+  }
+  80% {
+    transform: rotate(288deg);
+  }
+  90% {
+    transform: rotate(324deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// 适配Iphone X
+.fix-iphonex-bottom {
+  display: block;
+  padding-bottom: 34px;
+}

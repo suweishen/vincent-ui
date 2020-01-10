@@ -1,0 +1,71 @@
+/* 遮罩层 */
+.v-mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 9991;
+  transition: all 1s;
+}
+/* 模态框 */
+.v-modal{
+  display: block;
+}
+/* 模态框窗口容器 */
+.v-modal-wrap{
+  position: absolute;
+  width: 75%;
+  max-width: 480px;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  z-index: 9992;
+  opacity: 1;
+  transition: all 1s;
+}
+/* 模态框内容区 */
+.v-modal .v-modal-body{
+  padding: .8rem .8rem 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  overflow: hidden;
+}
+/* 模态框内容区标题 */
+.v-modal-title {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transform: translateY(-.7rem);
+}
+/* 模态框尾部 */
+.v-modal .v-modal-footer{
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+/* 模态框尾部里按钮的样式 */
+.v-modal .v-modal-footer .v-btn{
+  border: none;
+  text-align: center;
+  padding: .6rem 0;
+  border-radius: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+/* 模态框尾部中的按钮加上分隔 */
+.v-modal .v-modal-footer .v-btn + .v-btn{
+  border-left: 1px solid #ddd;
+}
+.fail {
+  color: #ed4014;
+}
+.confirm {
+  color: #2d8cf0;
+}
