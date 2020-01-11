@@ -92,11 +92,11 @@
       @confirm-click="showDialog = false"
     />
 
-    <v-tabbar>
-      <v-tabbar-item icon="home"></v-tabbar-item>
-      <v-tabbar-item icon="category"></v-tabbar-item>
-      <v-tabbar-item icon="search"></v-tabbar-item>
-      <v-tabbar-item icon="my"></v-tabbar-item>
+    <v-tabbar v-model="active">
+      <v-tabbar-item icon="home" activeIcon="homeActive">首页</v-tabbar-item>
+      <v-tabbar-item icon="category" activeIcon="categoryActive">分类</v-tabbar-item>
+      <v-tabbar-item icon="search" activeIcon="searchActive">搜索</v-tabbar-item>
+      <v-tabbar-item icon="my" activeIcon="myActive">我的</v-tabbar-item>
     </v-tabbar>
   </div>
 </template>
@@ -112,7 +112,8 @@ export default {
       showTopPopup: false,
       showBottomPopup: false,
       showLeftPopup: false,
-      showRightPopup: false
+      showRightPopup: false,
+      active: 0,
     }
   },
   methods: {
@@ -121,6 +122,14 @@ export default {
       // if (data) {
       //   this.showDialog = true
       // }
+    }
+  },
+  watch: {
+    active: {
+      handler(newVal) {
+        console.log('home:' + newVal)
+      },
+      immediate: true
     }
   }
 }
