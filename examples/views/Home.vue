@@ -34,6 +34,12 @@
       <v-col span="16" offset="4" >span:16 offset:4</v-col>
     </v-row>
 
+    <v-row>
+      <v-col span="5">span:5</v-col>
+      <v-col span="18" offset="2" >span:18 offset:2</v-col>
+      <v-col span="24" >span:24</v-col>
+    </v-row>
+
     <v-divider
       text="Popup弹出层"
     />
@@ -92,6 +98,16 @@
       @confirm-click="showDialog = false"
     />
 
+    <v-divider
+      text="Calendar"
+    />
+
+    <v-button type="primary" @click="calendarShow = true">日历弹窗</v-button>
+
+    <v-popup :show="calendarShow" popupHeight="400" position="bottom" round @click-mask="calendarShow = false">
+      <v-calendar />
+    </v-popup>
+
     <v-tabbar v-model="active">
       <v-tabbar-item icon="home" activeIcon="homeActive">首页</v-tabbar-item>
       <v-tabbar-item icon="category" activeIcon="categoryActive">分类</v-tabbar-item>
@@ -113,6 +129,7 @@ export default {
       showBottomPopup: false,
       showLeftPopup: false,
       showRightPopup: false,
+      calendarShow: false,
       active: 0,
     }
   },
@@ -140,9 +157,7 @@ export default {
     padding: 0;
     margin: 0;
   }
-  // .home {
-  //   width: 100%;
-  //   height: 100%;
-  //   background: #f9f9f9;
-  // }
+  .home {
+    padding-bottom: 135px;
+  }
 </style>

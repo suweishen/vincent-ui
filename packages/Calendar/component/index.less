@@ -1,0 +1,224 @@
+#calendar {
+  position: relative;
+  width: 100%;
+  height:auto;
+  margin: 0 auto;
+  transition: all 0.5s;
+  overflow: hidden;
+  background: #fafafa;
+  z-index: 9999;
+  .change {
+    height: 250px !important;
+  }
+  .year-month {
+      height:80px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .year-month_left{
+        height:100%;
+        width:80%;
+        padding-left: 25px;
+        display: flex;
+        align-items: center;
+          .top-time {
+            color:#333;
+            font-size:26px;
+            font-weight:500;
+            margin-right: 15px;
+        }
+        ul{
+          display:flex;
+          flex-direction:column;
+          li{
+            color:#444;
+            font-size:16px;
+          }
+        }
+      }
+      .year-month_right{
+        height:100%;
+        width:20%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 12px;
+        .i-plus-empty{
+          fill: #f18d2f;
+        }
+      }
+    }
+    .weekdays {
+      margin: 0;
+      height: 40px;
+      font-size: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      color: #666;
+      justify-content: space-around;
+      li{
+        display: inline-block;
+        width: 13.6%;
+        text-align: center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+    }
+    .days {
+      height: 210px;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      overflow: hidden;
+      position: relative;
+      li{
+        list-style-type: none;
+        display: inline-block;
+        height: 42px;
+        width: 13.4%;
+        text-align: center;
+        font-size: 14px;
+        color: #000;
+        position: relative;
+        .active{
+          border-radius: 50%;
+          background: #3a8fea;
+          color: #fff;
+          width: 40px;
+          height: 40px;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .other-month{
+          width: 40px;
+          height: 40px;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #a2a2a2;
+        }
+        .everyDay {
+          width: 40px;
+          height: 40px;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .circle {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: #f2553d;
+          position: absolute;
+          bottom: 6px;
+          left: 48%;
+        }
+        .o {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          border: 1px solid #f2553d;
+          position: absolute;
+          bottom: 1px;
+          left: 49%;
+        }
+        .otherday {
+          width: 38px;
+          height: 38px;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          border:1px solid #b2b2b2;
+        }
+      }
+      
+    }
+     .fadeOut {
+      animation-name: fadeOut;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+    }
+    .fadeOutR {
+      animation-name: fadeOutR;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+    }
+     .fadeIn {
+      animation-name: fadeIn;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+    }
+    .fadeInR {
+      animation-name: fadeInR;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+    }
+    .background {
+      position: absolute;
+      top: 120px;
+      height: 210px;
+      width: 100%;
+      z-index: -1;
+      overflow: hidden;
+      transition: all 0.5s;
+      .dbg {
+        background-color: #e1e1e1;
+        height: 42.2px;
+      }
+      .lbg {
+        background-color: #d5d5d5;
+        height: 42.2px;
+      }
+    }
+}
+ 
+@keyframes fadeOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeOutR {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+@keyframes fadeInR {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

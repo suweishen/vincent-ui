@@ -12,10 +12,11 @@ import Row from './Row'
 import Switch from './Switch'
 import Tabbar from './Tabbar'
 import TabbarItem from './TabbarItem'
+import Calendar from './Calendar'
 
 // 存储组建列表
 const components = [
-  Button, Col, Dialog, Divider, Icon, Popup, Row, Switch, Tabbar, TabbarItem, Cell
+  Button, Col, Dialog, Divider, Icon, Popup, Row, Switch, Tabbar, TabbarItem, Cell, Calendar
 ]
 
 // 定义install方法，接收Vue作为参数
