@@ -1,5 +1,25 @@
 <template>
   <div class="home">
+    <div style="width: 100%; overflow: hidden;">
+      <v-swipe @change="swiperChange" :initialIndex="2" indicatorColor="#2d8cf0">
+        <v-swipe-item>
+          <img src="http://img1.qunarzz.com/piao/fusion/1801/1a/94428c6dea109402.jpg_640x200_2cf590d8.jpg" />
+        </v-swipe-item>
+        <v-swipe-item>
+          <img src="http://img1.qunarzz.com/piao/fusion/1802/42/7c92b9a381e46402.jpg_640x200_1cdce2a4.jpg" />
+        </v-swipe-item>
+        <v-swipe-item>
+          <img src="http://img1.qunarzz.com/piao/fusion/1801/1a/94428c6dea109402.jpg_640x200_2cf590d8.jpg" />
+        </v-swipe-item>
+        <v-swipe-item>
+          <img src="http://img1.qunarzz.com/piao/fusion/1802/42/7c92b9a381e46402.jpg_640x200_1cdce2a4.jpg" />
+        </v-swipe-item>
+        <v-swipe-item>
+          <img src="http://img1.qunarzz.com/piao/fusion/1801/1a/94428c6dea109402.jpg_640x200_2cf590d8.jpg" />
+        </v-swipe-item>
+      </v-swipe>
+    </div>
+
     <v-divider
       text="按钮类型"
     />
@@ -139,6 +159,9 @@ export default {
       // if (data) {
       //   this.showDialog = true
       // }
+    },
+    swiperChange (index) {
+      console.log(index)
     }
   },
   watch: {
